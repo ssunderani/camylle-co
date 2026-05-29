@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Camylle & Co. - Premium family-owned distributor in Toronto, connecting markets and elevating standards with trusted brand partnerships.">
+  <title>Camylle & Co. | Owned with Pride. Built on Trust.</title>
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Material Symbols (Icons) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  
+  <!-- Early dark mode verification to prevent screen flash -->
+  <script>
+    if (localStorage.getItem('theme') === 'dark' || 
+        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Sticky Header Navigation -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="#" class="logo" id="nav-logo">Camylle & Co.</a>
+      
+      <nav class="hidden-mobile">
+        <ul class="nav-links">
+          <li><a href="#" class="nav-link active" id="link-home">Home</a></li>
+          <li><a href="#about" class="nav-link" id="link-about">About Us</a></li>
+          <li><a href="#brands" class="nav-link" id="link-brands">Brands We Carry</a></li>
+          <li><a href="#contact" class="nav-link" id="link-contact">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggleBtn" aria-label="Toggle dark/light theme" title="Toggle dark/light theme">
+          <span class="material-symbols-outlined" id="themeToggleIcon">dark_mode</span>
+        </button>
+        
+        <!-- Contact CTA -->
+        <a href="#contact" class="btn btn-primary hidden-mobile" id="cta-contact-nav">Contact Us</a>
+        
+        <!-- Hamburger Menu Toggle (Mobile) -->
+        <button class="menu-toggle" id="menuToggleBtn" aria-label="Open navigation menu">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <aside class="mobile-nav" id="mobileDrawer">
+    <div class="mobile-nav-header">
+      <span class="logo">Camylle & Co.</span>
+      <button class="close-btn" id="closeDrawerBtn" aria-label="Close navigation menu">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <ul class="mobile-links">
+      <li><a href="#" id="mob-home">Home</a></li>
+      <li><a href="#about" id="mob-about">About Us</a></li>
+      <li><a href="#brands" id="mob-brands">Brands We Carry</a></li>
+      <li><a href="#contact" id="mob-contact">Contact Us</a></li>
+    </ul>
+    <div style="margin-top: auto;">
+      <a href="#contact" class="btn btn-primary" style="width: 100%;" id="mob-cta-contact">Get In Touch</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="hero-subtitle">Premium Distribution</p>
+          <h1 class="hero-title">Owned with Pride.<br><span>Built on Trust.</span></h1>
+          <p class="hero-description body-lg">
+            Proudly family-owned in Toronto, we’re committed to lasting partnerships built on trust and exceptional product quality.
+          </p>
+          <div class="hero-actions">
+            <a href="#about" class="btn btn-primary" id="hero-cta-more">Learn More</a>
+            <button class="btn btn-secondary" id="hero-cta-history">Our History</button>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <div class="hero-img-container">
+            <img class="hero-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqmpPlI_-HSp_aUqopJ0gYoHW4pstqvOUGSj807dib0LJmRCKxhGWO8dvnir6TylEdJWoE3XTcGM1XsEysW7ljNmgFRmJXwlX6TkakWZ_cF2FebdFrinP-nzEUCDC8aW_EakkqDkCz1W1kyFaq82JewpzVu0mB3wuYqNT9AmWVytSZET0YcLC_4qbjHT5Zw1pE9lnMdStvUpnaIUwZF6ZPzHu_g9QkkD4mW-V98afERHuhnM29ASMU3BNXYThLp882Nd35H6xvlwQ" alt="Multi-generational family smiling in a modern bright grocery environment representing trust and heritage.">
+          </div>
+          <div class="hero-deco-1"></div>
+          <div class="hero-deco-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about py-section-gap" id="about">
+      <div class="container about-grid">
+        <div class="about-image-wrapper">
+          <div class="about-img-container">
+            <img class="about-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_ggz_XudjUtsv6MdYy_LykYLbyyafP7IJ_2gD1HNKMn7LxrcbDz2Mj2JK0ZuuX1YRX1yQ7CL2vNBVBKBUTHzOTKZuzn4Stc41he5V1oxm9LS_pKyEOBBmYDoml8Q-AXqFHAVBU2Hpor8-I1mrwtx5nJwOjZusWY_e4Z8EyqyR-V7N5ymHX1jwSUElplAM0oqKixAli3vurml34rRuVGQVN7mfQFthRmlVngQkBGob6T7r_M7GJpE_pk6fdB37F876CHWvbIDmyCo" alt="Sophisticated retail display with fresh produce representing top quality standards.">
+          </div>
+          <div class="experience-badge" id="exp-badge">
+            <span class="experience-num">25+</span>
+            <span class="experience-lbl">Years of Trust</span>
+          </div>
+        </div>
+        <div>
+          <div class="about-header">
+            <p class="section-subtitle">About Us</p>
+            <h2 class="about-title headline-lg">Strength Through Connection</h2>
+          </div>
+          <p class="about-text body-lg">
+            As a family-owned Toronto business, we proudly partner with a diverse network of wholesalers—including national distributors, regional specialists, niche industry experts, independent family-run operations, and international trading partners. These relationships allow us to deliver exceptional products with consistency and reach, while upholding the trust, reliability, and long-term value that define our brand.
+          </p>
+          
+          <h3 class="wholesaler-title headline-sm">Wholesalers We Work With</h3>
+          
+          <div class="wholesaler-grid">
+            <!-- Card 1 -->
+            <div class="wholesaler-card" data-wholesaler="national">
+              <div class="wholesaler-card-header">
+                <span class="wholesaler-card-icon material-symbols-outlined">handshake</span>
+                <h4 class="wholesaler-card-name">National Distributors</h4>
+              </div>
+              <p class="wholesaler-card-desc body-sm">Large-scale partners with broad reach across Canada and the U.S., ensuring consistent product availability.</p>
+              <div class="wholesaler-card-details">
+                Provides full supply-chain solutions, container-level shipping, consolidated freight management, and nationwide fulfillment support directly to distribution hubs.
+              </div>
+              <span class="wholesaler-card-expand-indicator material-symbols-outlined">expand_more</span>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="wholesaler-card" data-wholesaler="regional">
+              <div class="wholesaler-card-header">
+                <span class="wholesaler-card-icon material-symbols-outlined">map</span>
+                <h4 class="wholesaler-card-name">Regional Wholesalers</h4>
+              </div>
+              <p class="wholesaler-card-desc body-sm">Trusted mid-sized partners serving specific provinces or territories, offering localized market expertise.</p>
+              <div class="wholesaler-card-details">
+                Optimized for local logistics, provincial retail compliance, tailored marketing programs, and deep community retail relationships in specific geographic sectors.
+              </div>
+              <span class="wholesaler-card-expand-indicator material-symbols-outlined">expand_more</span>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="wholesaler-card" data-wholesaler="specialty">
+              <div class="wholesaler-card-header">
+                <span class="wholesaler-card-icon material-symbols-outlined">verified</span>
+                <h4 class="wholesaler-card-name">Specialty Wholesalers</h4>
+              </div>
+              <p class="wholesaler-card-desc body-sm">Industry-focused distributors who cater to niche markets and prioritize premium, high-quality products.</p>
+              <div class="wholesaler-card-details">
+                Handles gourmet, organic, cold-chain sensitive, high-ticket boutique items, catering specifically to specialty grocers and high-end culinary outlets.
+              </div>
+              <span class="wholesaler-card-expand-indicator material-symbols-outlined">expand_more</span>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="wholesaler-card" data-wholesaler="independent">
+              <div class="wholesaler-card-header">
+                <span class="wholesaler-card-icon material-symbols-outlined">family_history</span>
+                <h4 class="wholesaler-card-name">Independent Wholesalers</h4>
+              </div>
+              <p class="wholesaler-card-desc body-sm">Values-aligned partners who share our commitment to integrity and personalized long-term service.</p>
+              <div class="wholesaler-card-details">
+                Focuses on agile, high-touch, relationship-driven partnerships with local independent grocers, offering flexible order minimums and dedicated care.
+              </div>
+              <span class="wholesaler-card-expand-indicator material-symbols-outlined">expand_more</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brands Carousel & Directory Grid -->
+    <section class="brands-section" id="brands">
+      <div class="brands-container-inner">
+        <p class="brands-subtitle">Brands We Carry</p>
+        <h2 class="brands-title headline-lg">Our Brand Collection</h2>
+      </div>
+
+      <!-- Marquee Ticker -->
+      <div class="marquee-container">
+        <div class="marquee-content">
+          <!-- Slide Set 1 -->
+          <div class="brand-logo-item" data-brand="greenhouse">Greenhouse</div>
+          <div class="brand-logo-item" data-brand="reserve">Reserve</div>
+          <div class="brand-logo-item" data-brand="masoni">Masoni</div>
+          <div class="brand-logo-item" data-brand="dart">Dart</div>
+          <div class="brand-logo-item" data-brand="britain_gummy">Britain Gummy</div>
+          <div class="brand-logo-item" data-brand="dewan">Dewan</div>
+          <div class="brand-logo-item" data-brand="sapsucker">Sap Sucker</div>
+          <div class="brand-logo-item" data-brand="alessi">Alessi</div>
+          <!-- Duplicate Set for loop -->
+          <div class="brand-logo-item" data-brand="greenhouse">Greenhouse</div>
+          <div class="brand-logo-item" data-brand="reserve">Reserve</div>
+          <div class="brand-logo-item" data-brand="masoni">Masoni</div>
+          <div class="brand-logo-item" data-brand="dart">Dart</div>
+          <div class="brand-logo-item" data-brand="britain_gummy">Britain Gummy</div>
+          <div class="brand-logo-item" data-brand="dewan">Dewan</div>
+          <div class="brand-logo-item" data-brand="sapsucker">Sap Sucker</div>
+          <div class="brand-logo-item" data-brand="alessi">Alessi</div>
+        </div>
+      </div>
+
+      <!-- Brand Directory & Search/Filter -->
+      <div class="brands-directory">
+        <div class="directory-controls">
+          <!-- Search Bar -->
+          <div class="search-wrapper">
+            <span class="material-symbols-outlined search-icon">search</span>
+            <input type="text" class="search-input" id="brandSearchInput" placeholder="Search brands, products or origins...">
+          </div>
+          <!-- Filter Tags -->
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all" id="filter-all">All Collections</button>
+            <button class="filter-btn" data-filter="beverages" id="filter-bev">Beverages</button>
+            <button class="filter-btn" data-filter="gourmet" id="filter-gour">Gourmet Foods</button>
+            <button class="filter-btn" data-filter="confectionery" id="filter-conf">Confectionery</button>
+            <button class="filter-btn" data-filter="packaging" id="filter-pack">Packaging</button>
+          </div>
+        </div>
+
+        <!-- Brands Grid -->
+        <div class="brands-grid" id="brandsGrid">
+          <!-- Greenhouse -->
+          <div class="brand-card" data-category="beverages">
+            <div class="brand-card-header">
+              <span class="brand-card-name">Greenhouse</span>
+              <span class="brand-tag">Beverages</span>
+            </div>
+            <p class="brand-card-desc">Organic, cold-pressed juices and plant milks craft-produced with zero additives.</p>
+            <div class="brand-card-origin">
+              <span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> Toronto, Canada
+            </div>
+          </div>
+          
+          <!-- Reserve -->
+          <div class="brand-card" data-category="gourmet">
+            <div class="brand-card-header">
+              <span class="brand-card-name">Reserve</span>
+              <span class="brand-tag">Gourmet Foods</span>
+            </div>
+            <p class="brand-card-desc">Artisanal pantry staples, cold-pressed olive oils, and small-batch heritage condiments.</p>
+            <div class="brand-card-origin">
+              <span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> Montreal, Canada
+            </div>
+          </div>
+
+          <!-- Masoni -->
+          <div class="brand-card" data-category="gourmet">
+            <div class="brand-card-header">
+              <span class="brand-card-name">Masoni</span>
+              <span class="brand-tag">Gourmet Foods</span>
+            </div>
+            <p class="brand-card-desc">Authentic Italian panforte, traditional cantuccini biscuits, and holiday confections.</p>
+            <div class="brand-card-origin">
+              <span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> Florence, Italy
+            </div>
+          </div>
+
+          <!-- Dart -->
+          <div class="brand-card" data-category="packaging">
+            <div class="brand-card-header">
+              <span class="brand-card-name">Dart</span>
+              <span class="brand-tag">Packaging</span>
+            </div>
+            <p class="brand-card-desc">Industry-standard, highly durable food service packaging and insulated containers.</p>
+            <div class="brand-card-origin">
+              <span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> Michigan, USA
+            </div>
+          </div>
+
+          <!-- Britain Gummy -->
+          <div class="brand-card" data-category="confectionery">
+            <div class="brand-card-header">
+              <span class="brand-card-name">Britain Gummy</span>
+              <span class="brand-tag">Confectionery</span>
+            </div>
+            <p class="brand-card-desc">Vegan-friendly, gelatin-free natural fruit gummies with premium British recipes.</p>
+            <div class="brand-card-origin">
+              <span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> London, UK
+            </div>
+          </div>
+
+          <!-- Dewan -->
+          <div class="brand-card" data-category="beverages">
+            <div class="brand-card-header">
+              <span class="brand-card-name">Dewan</span>
+              <span class="brand-tag">Beverages</span>
+            </div>
+            <p class="brand-card-desc">Single-origin premium estate teas, handpicked and direct-sourced for absolute quality.</p>
+            <div class="brand-card-origin">
+              <span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> Darjeeling, India
+            </div>
+          </div>
+
+          <!-- Sap Sucker -->
+          <div class="brand-card" data-category="beverages">
+            <div class="brand-card-header">
+              <span class="brand-card-name">Sap Sucker</span>
+              <span class="brand-tag">Beverages</span>
+            </div>
+            <p class="brand-card-desc">Organic, sparkling tree water harvested sustainably from Canadian maple trees.</p>
+            <div class="brand-card-origin">
+              <span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> Ontario, Canada
+            </div>
+          </div>
+
+          <!-- Alessi -->
+          <div class="brand-card" data-category="gourmet">
+            <div class="brand-card-header">
+              <span class="brand-card-name">Alessi</span>
+              <span class="brand-tag">Gourmet Foods</span>
+            </div>
+            <p class="brand-card-desc">Premium Mediterranean pantry items, traditional risottos, sea salts, and vinegars.</p>
+            <div class="brand-card-origin">
+              <span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> Rome, Italy
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact py-section-gap" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <div class="contact-header">
+            <p class="section-subtitle">Contact Us</p>
+            <h2 class="headline-lg" style="color: var(--primary);">Get In Touch</h2>
+          </div>
+          
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName" class="form-label">First Name (Required)</label>
+                <input type="text" id="firstName" class="form-control" placeholder="John" required>
+                <span class="error-message">First name is required</span>
+              </div>
+              <div class="form-group">
+                <label for="lastName" class="form-label">Last Name (Required)</label>
+                <input type="text" id="lastName" class="form-control" placeholder="Doe" required>
+                <span class="error-message">Last name is required</span>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email" class="form-label">Email (Required)</label>
+                <input type="email" id="email" class="form-control" placeholder="hello@company.com" required>
+                <span class="error-message">A valid email address is required</span>
+              </div>
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="tel" id="phone" class="form-control" placeholder="+1 (416) 000-0000">
+                <span class="error-message">Invalid phone format</span>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="message" class="form-label">Message (Required)</label>
+              <textarea id="message" class="form-control" placeholder="Tell us how we can help..." rows="4" required></textarea>
+              <span class="error-message">Please enter a message</span>
+            </div>
+            
+            <div>
+              <button type="submit" class="btn btn-primary" id="submitFormBtn">Submit Now</button>
+            </div>
+          </form>
+        </div>
+        
+        <div class="contact-image-wrapper">
+          <div class="contact-img-container">
+            <img class="contact-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFmsVFemmIy_Zp7N8m_HXP1rZi3JP6Zv8zyYuV4v6Y952E8v44u3sIxmNL9nzZpqOzjWq19tW22j6qwZ36wPNPLAtQxg97R7tPCLEX0JHVDG_6O4qxtI5-_l2lBoKjDLoorV2zXRr0l739yTkzgDtAFIfgmJYQDjIinx5Lne0sSjNLhEwx9xJqqjMmYwiE8_SUkPm929uxZMl1px5HfZbKK49isvpYC4l1o7-7siCUGGtw9XkeH9HTY1iDbOQtu6sOQBzdTLTsq4M" alt="Sleek corporate distribution network meeting representing reliability and trust.">
+          </div>
+          <div class="contact-deco-border"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a href="#" class="footer-logo">Camylle & Co.</a>
+        <p class="footer-desc">
+          Connecting Markets. Elevating Standards. A heritage of quality distribution in the heart of Toronto.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="LinkedIn"><span class="material-symbols-outlined">public</span></a>
+          <a href="#" class="social-link" aria-label="Email Contact"><span class="material-symbols-outlined">alternate_email</span></a>
+        </div>
+      </div>
+      
+      <div>
+        <h5 class="footer-heading">Quick Links</h5>
+        <ul class="footer-links">
+          <li><a href="#" id="foot-home">Home</a></li>
+          <li><a href="#about" id="foot-about">About Us</a></li>
+          <li><a href="#brands" id="foot-brands">Brands We Carry</a></li>
+          <li><a href="#contact" id="foot-contact">Contact Us</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h5 class="footer-heading">Contact Info</h5>
+        <ul class="footer-info">
+          <li>
+            <span class="material-symbols-outlined" style="color: var(--secondary);">mail</span>
+            hello@camylleco.ca
+          </li>
+          <li>
+            <span class="material-symbols-outlined" style="color: var(--secondary);">location_on</span>
+            Toronto, Ontario CANADA
+          </li>
+        </ul>
+      </div>
+      
+      <div class="footer-trust">
+        <h5 class="footer-heading">Trust & Quality</h5>
+        <p class="footer-quote">"Built on the values of integrity and long-term partnership."</p>
+        <div class="flag-container">
+          <!-- Canada Flag -->
+          <img class="flag-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfONHjDNTO-V0-yeDdh7u372sXHLQ3ECg8vmQqdJHWdca6LlF5e-vZ_JpzRfBeom3-o7cxRRHbgaUvR4JXVORzvdU61dWoGOXrpRpP6m5uXHubbd89GapOdmHqoPpX9CFR4iQ6EIICt7dGuWL2Po33m9q3WruulsNplRHzRzTQKEmRn2OGBYkyza-9fezmBCB9AgirCqLqrs4AlIR1xCjLOZSKVIEsurpAJtARrKT6q85NBApzr9WoE64t56IalvmkDCrDxWOqmDg" alt="Canada Flag">
+          <!-- USA Flag -->
+          <img class="flag-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJA6J2GBsXfPvh2Ts6awztC38KVrtIvycNH3I-ZXMFQOSn4cGGW9-DfwFjtyagwyr4rBkE-zOQ2LmTmSCUsFbGcnNB5cDvAfk3jTcxNLDckvhJ0xAjRdVobTZ6nuaHdi45IhU0D07uZl0ADCKRTH461h4VzO8a0JbMG4SnPMhoROYOsU_3-UoZHwS9g5RThh2jrGkPgrpTdWzEUdmL8LBTQYWlXssbRFuHgG2KjEVwYH40KpKXc8hmdgvTvWXPji2YEtdh_Bquw1I" alt="USA Flag">
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p>© 2026 Camylle & Co. All Rights Reserved.</p>
+        <div class="footer-meta-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <span>|</span>
+          <p class="designer-credit">Website by <span>ZillionDesigns</span></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll-to-Top Floating Action Button -->
+  <button class="fab" id="scrollToTopBtn" aria-label="Scroll back to top">
+    <span class="material-symbols-outlined">expand_less</span>
+  </button>
+
+  <!-- Timeline Modal (History Milestone modal) -->
+  <div class="modal-overlay" id="historyModalOverlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title">Our Heritage Timeline</h3>
+        <button class="modal-close" id="closeModalBtn" aria-label="Close timeline modal">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul class="timeline">
+          <li class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-year">2001</div>
+            <h4 class="timeline-title">Founded in Toronto</h4>
+            <p class="timeline-desc">Established as a local family distributor in Ontario, dedicated to connecting localized specialty brands with independent family grocers.</p>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-year">2008</div>
+            <h4 class="timeline-title">Expanding the Network</h4>
+            <p class="timeline-desc">Secured partnerships with regional distribution hubs, extending our shipping lanes to Western Canada and securing logistics for larger volumes.</p>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-year">2015</div>
+            <h4 class="timeline-title">Niche Specialty focus</h4>
+            <p class="timeline-desc">Onboarded premium organic food & packaging brands, positioning ourselves as the primary distributor of high-fidelity specialty products.</p>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-year">2021</div>
+            <h4 class="timeline-title">Next Generation Handover</h4>
+            <p class="timeline-desc">Transitioned leadership to the second generation, modernizing distribution channels while upholding our foundational commitment to trust and relationship-first service.</p>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-year">2026</div>
+            <h4 class="timeline-title">Premium Digital Modernization</h4>
+            <p class="timeline-desc">Reimagined the brand concept with a light-flooded editorial digital interface, matching classic corporate excellence with high-fidelity modern functionality.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Template Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>

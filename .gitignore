@@ -1,0 +1,6 @@
+# Ignore design asset archives
+stitch_camylleco_modernization_concept.zip
+stitch_camylleco_modernization_concept/
+
+# Ignore local server utilities
+serve.ps1
